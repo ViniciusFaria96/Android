@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="5dp"
+    android:id="@+id/cardview1"
+    tools:context=".MainActivity">
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <TextView
+            android:id="@+id/dados_do_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Dados do Cliente"
+            android:fontFamily="@font/santral_bold"
+            android:textColor="#000000"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/razao_social_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_below="@+id/dados_do_cliente"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="Razão Social Cliente" />
+
+        <TextView
+            android:id="@+id/nome_fantasia_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#606060"
+            android:layout_below="@+id/razao_social_cliente"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="Nome Fantasia Cliente" />
+
+        <TextView
+            android:id="@+id/cpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#606060"
+            android:layout_below="@+id/nome_fantasia_cliente"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="CPF:" />
+
+        <TextView
+            android:id="@+id/cpf_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            android:layout_toEndOf="@+id/cpf"
+            android:layout_below="@+id/nome_fantasia_cliente"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="758.140.301-78" />
+
+        <TextView
+            android:id="@+id/cnpj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#606060"
+            android:layout_below="@+id/cpf"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="CNPJ:" />
+
+        <TextView
+            android:id="@+id/cnpj_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            android:layout_toEndOf="@+id/cnpj"
+            android:layout_below="@+id/cpf_numero"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="758.140.301-78" />
+
+        <TextView
+            android:id="@+id/atividade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#606060"
+            android:layout_below="@+id/cnpj"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="Ramo de atividade: " />
+
+        <TextView
+            android:id="@+id/ramo_atividade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            android:layout_toEndOf="@+id/atividade"
+            android:layout_below="@+id/cnpj_numero"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="Panificadora" />
+
+        <TextView
+            android:id="@+id/endereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#606060"
+            android:layout_below="@+id/atividade"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="Endereço: " />
+
+        <TextView
+            android:id="@+id/endereco_atual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            android:layout_toEndOf="@+id/endereco"
+            android:layout_below="@+id/ramo_atividade"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/santral_book"
+            android:text="ROD BR-060 KM 288 SN" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

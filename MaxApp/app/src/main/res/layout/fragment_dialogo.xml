@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="50dp"
+    app:cardCornerRadius="5dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/legendas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#000000"
+            android:text="@string/legendas"
+            android:textSize="25sp"
+            android:fontFamily="@font/santral_bold"/>
+
+        <TextView
+            android:id="@+id/status_erp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="@string/status_do_pedido_no_erp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/legendas"/>
+
+        <ImageView
+            android:id="@+id/fundo_processamento"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/status_erp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#95989A"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_maxima_em_processamento"
+            android:layout_alignEnd="@+id/fundo_processamento"
+            android:layout_alignBottom="@+id/fundo_processamento"
+            android:layout_alignTop="@id/fundo_processamento"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:id="@+id/texto_processamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/status_erp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/fundo_processamento"
+            android:text="@string/em_processamento_por_parte_do_fv"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:id="@+id/fundo_recusa"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_processamento"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF9900"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_recusa"
+            android:layout_alignTop="@id/fundo_recusa"
+            android:layout_alignEnd="@+id/fundo_recusa"
+            android:layout_alignBottom="@+id/fundo_recusa"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_recusa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_processamento"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="21dp"
+            android:layout_toEndOf="@+id/fundo_recusa"
+            android:text="@string/pedido_recusado_pelo_erp"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/fundo_pendente"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_recusa"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#606060"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_pendente"
+            android:layout_alignTop="@id/fundo_pendente"
+            android:layout_alignEnd="@+id/fundo_pendente"
+            android:layout_alignBottom="@+id/fundo_pendente"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="P"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_pendente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_recusa"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/fundo_pendente"
+            android:text="@string/posicao_no_erp_pendente"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/fundo_bloqueado"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_pendente"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#3557AA"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_bloqueado"
+            android:layout_alignTop="@id/fundo_bloqueado"
+            android:layout_alignEnd="@+id/fundo_bloqueado"
+            android:layout_alignBottom="@+id/fundo_bloqueado"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="B"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_bloqueado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_pendente"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/fundo_pendente"
+            android:text="@string/posicao_no_erp_bloqueado"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/fundo_liberado"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_bloqueado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#186096"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_liberado"
+            android:layout_alignTop="@id/fundo_liberado"
+            android:layout_alignEnd="@+id/fundo_liberado"
+            android:layout_alignBottom="@+id/fundo_liberado"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="L"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_liberado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_bloqueado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/fundo_pendente"
+            android:text="@string/posicao_no_erp_liberado"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/fundo_montado"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_liberado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#7FAA33"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_montado"
+            android:layout_alignTop="@id/fundo_montado"
+            android:layout_alignEnd="@+id/fundo_montado"
+            android:layout_alignBottom="@+id/fundo_montado"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="M"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_montado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_liberado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/fundo_pendente"
+            android:text="@string/posicao_no_erp_montado"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/fundo_faturado"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_montado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#64863B"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_faturado"
+            android:layout_alignTop="@id/fundo_faturado"
+            android:layout_alignEnd="@+id/fundo_faturado"
+            android:layout_alignBottom="@+id/fundo_faturado"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="F"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_faturado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_montado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/fundo_pendente"
+            android:text="@string/posicao_no_erp_faturado"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/fundo_cancelado"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_faturado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#E40613"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_cancelado"
+            android:layout_alignTop="@id/fundo_cancelado"
+            android:layout_alignEnd="@+id/fundo_cancelado"
+            android:layout_alignBottom="@+id/fundo_cancelado"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="C"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_cancelado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_faturado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/fundo_pendente"
+            android:text="@string/posicao_no_erp_cancelado"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/fundo_orcamento"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/borda_circular"
+            android:layout_below="@+id/fundo_cancelado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#2D3E4E"/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:layout_alignStart="@+id/fundo_orcamento"
+            android:layout_alignTop="@id/fundo_orcamento"
+            android:layout_alignEnd="@+id/fundo_orcamento"
+            android:layout_alignBottom="@+id/fundo_orcamento"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="O"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/texto_orcamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texto_cancelado"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/fundo_pendente"
+            android:text="@string/orcamento"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@id/critica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/critica"
+            android:layout_below="@id/fundo_orcamento"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:id="@+id/img_critica_aguardando"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/critica"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_maxima_aguardando_critica" />
+
+        <TextView
+            android:id="@+id/txt_critica_aguardando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/critica"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/img_critica_aguardando"
+            android:text="@string/aguardando_retorno_do_erp"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:id="@+id/img_critica_sucesso"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/img_critica_aguardando"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_maxima_critica_sucesso" />
+
+        <TextView
+            android:id="@+id/txt_critica_sucesso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_critica_aguardando"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/img_critica_aguardando"
+            android:text="@string/sucesso"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/img_critica_parcial"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/img_critica_sucesso"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_maxima_critica_alerta" />
+
+        <TextView
+            android:id="@+id/txt_critica_parcial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_critica_sucesso"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/img_critica_parcial"
+            android:text="@string/falha_parcial"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/img_critica_total"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/img_critica_parcial"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_maxima_legenda_cancelamento" />
+
+        <TextView
+            android:id="@+id/txt_critica_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_critica_parcial"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/img_critica_total"
+            android:text="@string/falha_total"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_critica_total"
+            android:text="@string/legendas"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>

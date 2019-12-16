@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/img_pedido"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="11dp"
+                android:background="@drawable/borda_circular"
+                android:backgroundTint="#606060" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignStart="@+id/img_pedido"
+                android:layout_alignTop="@+id/img_pedido"
+                android:layout_alignEnd="@+id/img_pedido"
+                android:layout_alignBottom="@+id/img_pedido"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_maxima_em_processamento" />
+
+            <TextView
+                android:id="@+id/n_ped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@+id/img_pedido"
+                android:fontFamily="@font/santral_bold"
+                android:text="N° Ped. RCA/ERP:"
+                android:textColor="#95989A"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/n_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@id/n_ped"
+                android:fontFamily="@font/santral_bold"
+                android:text="x.xxx.xxx.xxx / x.xxx.xxx.xxx"
+                android:textColor="#000000"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/data_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/santral_bold"
+                android:text="data/hora"
+                android:textColor="#95989A"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/n_ped"
+                android:layout_toEndOf="@+id/img_pedido"
+                android:fontFamily="@font/santral_bold"
+                android:layout_marginTop="10dp"
+                android:text="Cliente:"
+                android:textColor="#95989A"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/nome_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/n_ped"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/cliente"
+                android:fontFamily="@font/santral_bold"
+                android:text="JOAO DA SILVA LTDA"
+                android:textColor="#000000"
+                android:textSize="10sp"/>
+
+            <ImageView
+                android:id="@+id/icone_corte"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/data_hora"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_maxima_legenda_corte" />
+
+            <TextView
+                android:id="@+id/status_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente"
+                android:layout_toEndOf="@+id/img_pedido"
+                android:fontFamily="@font/santral_bold"
+                android:layout_marginTop="10dp"
+                android:text="Status do Pedido"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/critica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nome_cliente"
+                android:layout_toEndOf="@+id/status_pedido"
+                android:fontFamily="@font/santral_bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="Crítica:"
+                android:textColor="#95989A"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_maxima_aguardando_critica"
+                android:layout_toEndOf="@id/critica"
+                android:layout_below="@id/nome_cliente"/>
+
+            <TextView
+                android:id="@+id/valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icone_corte"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/santral_bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="R$ 617,40"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#186096"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

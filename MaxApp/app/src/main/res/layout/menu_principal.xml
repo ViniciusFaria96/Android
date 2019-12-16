@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/btn_pessoas"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/borda_arredondada"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pedidos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pessoas_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_maxima_pessoas"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pessoas"
+        app:layout_constraintEnd_toEndOf="@+id/btn_pessoas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_pessoas"
+        app:layout_constraintTop_toTopOf="@+id/btn_pessoas"
+        app:layout_constraintVertical_bias="0.400" />
+
+
+    <TextView
+        android:id="@+id/txt_clientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#232323"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/santral_bold"
+        android:text="Clientes"
+        app:layout_constraintEnd_toEndOf="@+id/btn_pessoas"
+        app:layout_constraintStart_toStartOf="@+id/btn_pessoas"
+        app:layout_constraintTop_toBottomOf="@+id/pessoas_img" />
+
+    <ImageButton
+        android:id="@+id/btn_pedidos"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/borda_arredondada"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pessoas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_pessoas" />
+
+    <ImageView
+        android:id="@+id/pedidos_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_maxima_pedido"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pedidos"
+        app:layout_constraintEnd_toEndOf="@+id/btn_pedidos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_pedidos"
+        app:layout_constraintTop_toTopOf="@+id/btn_pedidos"
+        app:layout_constraintVertical_bias="0.400" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/santral_bold"
+        android:text="Pedidos"
+        android:textColor="#232323"
+        app:layout_constraintEnd_toEndOf="@+id/btn_pedidos"
+        app:layout_constraintStart_toStartOf="@+id/btn_pedidos"
+        app:layout_constraintTop_toBottomOf="@+id/pedidos_img" />
+
+    <ImageButton
+        android:id="@+id/btn_vendas"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/borda_arredondada"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ferramentas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pessoas" />
+
+    <ImageView
+        android:id="@+id/vendas_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_maxima_resumo_vendas"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_vendas"
+        app:layout_constraintEnd_toEndOf="@+id/btn_vendas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_vendas"
+        app:layout_constraintTop_toTopOf="@+id/btn_vendas"
+        app:layout_constraintVertical_bias="0.400" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/santral_bold"
+        android:text="Resumo de Vendas"
+        android:textColor="#232323"
+        app:layout_constraintEnd_toEndOf="@+id/btn_vendas"
+        app:layout_constraintStart_toStartOf="@+id/btn_vendas"
+        app:layout_constraintTop_toBottomOf="@id/vendas_img" />
+
+    <ImageButton
+        android:id="@+id/btn_ferramentas"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/borda_arredondada"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_vendas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_vendas" />
+
+    <ImageView
+        android:id="@+id/ferramentas_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_maxima_ferramentas"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_ferramentas"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ferramentas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_ferramentas"
+        app:layout_constraintTop_toTopOf="@+id/btn_ferramentas"
+        app:layout_constraintVertical_bias="0.400" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#232323"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/santral_bold"
+        android:text="Ferramentas"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ferramentas"
+        app:layout_constraintStart_toStartOf="@+id/btn_ferramentas"
+        app:layout_constraintTop_toBottomOf="@id/ferramentas_img" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

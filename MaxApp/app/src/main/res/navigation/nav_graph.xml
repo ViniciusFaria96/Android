@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuPrincipal">
+    <fragment
+        android:id="@+id/menuPrincipal"
+        android:name="com.example.maxapp.ui.MenuPrincipal"
+        android:label="MenuPrincipal"
+        tools:layout="@layout/menu_principal">
+        <action
+            android:id="@+id/action_menuPrincipal_to_dadosCliente"
+            app:destination="@id/dadosCliente" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_splashActivity"
+            app:destination="@id/splashActivity" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_histPedidos"
+            app:destination="@id/histPedidos" />
+    </fragment>
+    <fragment
+        android:id="@+id/dadosCliente"
+        android:name="com.example.maxapp.ui.DadosCliente"
+        android:label="DadosCliente"
+        tools:layout="@layout/lista_clientes_contatos"/>
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.maxapp.ui.SplashActivity"
+        android:label="SplashActivity" />
+    <fragment
+        android:id="@+id/histPedidos"
+        android:name="com.example.maxapp.ui.HistPedidos"
+        android:label="HistPedidos"
+        tools:layout="@layout/fragment_hist_pedidos">
+        <action
+            android:id="@+id/action_histPedidos_to_dialogLegendas"
+            app:destination="@id/dialogLegendas" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogLegendas"
+        android:name="com.example.maxapp.ui.DialogLegendas"
+        android:label="DialogLegendas"
+        tools:layout="@layout/fragment_dialogo"/>
+</navigation>
